@@ -41,13 +41,7 @@ import numpy as np
 # df = df.assign(derivative=df.diff().eval('y/X'))
 # df.plot(x='X', y='derivative', ax=ax)
 # -*- coding: utf-8 -*-
-"""
-@File    : test.py
-@Time    : 2020/5/18 21:09
-@Author  : Dontla
-@Email   : sxana@qq.com
-@Software: PyCharm
-"""
+
 # from sympy import symbols, diff
 
 # x, y = symbols('x y', real=True)
@@ -98,6 +92,12 @@ import numpy as np
 # plt.title("函数、一阶导数、二阶导数")
 # plt.legend(loc='upper right')
 # plt.show()
+np.gradient(f) 计算数组f中元素的梯度，当f为多维时，返回每个维度的梯度
+梯度：连续值之间的变化率，即斜率
+实例代码如下
+#一维数组：存在俩侧值 斜率=（右侧值-左侧值）/ 2
+只存在一侧值 斜率=（本身-左侧值） 或者 （右侧值-本身）
+
 import numpy as np
 c=np.random.randint(0,20,(3,5))
 # c=[ 7, 15 ,5, 9]
